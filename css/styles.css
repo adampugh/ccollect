@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: 'Playfair Display'; */
+    /* font-family: 'Nunito'; */
+    /* font-family: 'Quicksand'; */
+    font-family: 'Lacquer';
+    /* font-family: 'Spartan'; */
+    font-size: 14px;
+    background: url(../images/immortal-hulk-2-virgin.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.heading {
+    font-family: 'Lacquer';
+    font-size: 60px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.heading__plus {
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+}
+
+#comics {
+    min-height: 600px;
+}
+
+.button1{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border: 1px solid #000;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Lacquer';
+    font-weight:300;
+    color: #000;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.button1:hover{
+    color:#fff;
+    background-color:#000;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+@media all and (max-width:30em){
+    .button1{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+
+
+.comic__grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding-top: 40px;
+}
+
+.comic__grid__item {
+    text-align: center;
+    box-sizing: border-box;
+    margin: 2px;
+    padding-bottom: 20px;
+    transition: all 0.2s;
+}
+
+.comic__grid__item:hover {
+    background: #070707;
+    cursor: pointer;
+}
+
+.comic__grid__item:hover h3,
+.comic__grid__item:hover p {
+    color: #fff;
+}
+
+.comic__grid__item:hover .number {
+    color: #9e259e;
+}
+
+.comic__grid__item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.comic__grid__item h3,
+.comic__grid__item p {
+    padding: 0 4px;
+}
+
+.comic__grid__item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.number {
+    color: #9e259e;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comic__grid__list {
+    margin: 2px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.comic__grid__list h1 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comic__grid__list img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.comic__grid__list__text {
+    height: 50px;
+}
+
+.comic__grid__list__wrapper {
+    margin-top: 30px;
+}
+
+.comic__grid__list__item {
+    /* padding: 5px 0 5px 25px; */
+    box-sizing: border-box;
+    text-align: left;
+    border-bottom: 1px solid lightgrey;
+}

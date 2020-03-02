@@ -1,0 +1,242 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Comic Collection</title>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Spartan&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lacquer|Nunito|Playfair+Display|Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="heading container">
+            <h1>Comic Collection</h1>
+            <img class="heading__plus" src="images/plus.jpg" alt="plus" id="plus" />
+        </div>
+
+        <section id="comics" class="container">
+            <!-- default state -->
+            <div x-data="{ tab: 'top10' }">
+                <!-- tab buttons -->
+                <button :class="{ 'active': tab === 'top10' }" @click="tab = 'top10'" class="button1">Top 16</button>
+                <button :class="{ 'active': tab === 'wanted' }" @click="tab = 'wanted'" class="button1">Wanted</button>
+                <button :class="{ 'active': tab === 'spidey' }" @click="tab = 'spidey'" class="button1">Spider-Man</button>
+                <button :class="{ 'active': tab === 'collected' }" @click="tab = 'collected'" class="button1">Collected</button>
+                <button :class="{ 'active': tab === 'series' }" @click="tab = 'series'" class="button1">Series</button>
+
+                <!-- ************************************************************************************************** -->
+                <!--                                               TOP 16                                               -->
+                <!-- ************************************************************************************************** -->
+                <div x-show="tab === 'top10'" class="comic__grid" id="top16">
+                    <div class="comic__grid__item">
+                        <img src="images/immortal-hulk-1.jpg" alt="comic"/>
+                        <p class="number">#1</p>
+                        <h3>Immortal Hulk</h3>
+                        <p>First print £40</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/immortal-hulk-2.jpg" alt="comic"/>
+                        <p class="number">#2</p>
+                        <h3>Immortal Hulk</h3>
+                        <p>First print £40</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/immortal-hulk-2-virgin.jpg" alt="comic"/>
+                        <p class="number">#2</p>
+                        <h3>Immortal Hulk</h3>
+                        <p>Fifth Print 1:25 Virgin Cover</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/avengers-684.jpg" alt="comic"/>
+                        <p class="number">#684</p>
+                        <h3>Avengers</h3>
+                        <p>First app of Immortal Hulk £35</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/batman-beyond-1.jpg" alt="comic"/>
+                        <p class="number">#1</p>
+                        <h3>Batman Beyond</h3>
+                        <p>First batman beyond</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/batman-who-laughs-2-dell-otto.png" alt="comic"/>
+                        <p class="number">#2</p>
+                        <h3>Batman Who Laughs</h3>
+                        <p>Dell'Otto Variant</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/teen-titans-metal-12.jpg" alt="comic"/>
+                        <p class="number">#12</p>
+                        <h3>Teen Titans Metal</h3>
+                        <p>First app of Batman Who Laughs</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/spawn-285-mattina.jpeg" alt="comic"/>
+                        <p class="number">#285</p>
+                        <h3>Spawn</h3>
+                        <p>£100</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="" alt="comic"/>
+                        <p class="number"></p>
+                        <h3>Title</h3>
+                        
+                        <p>Price?</p>
+                    </div>
+                </div>
+
+
+                <!-- ************************************************************************************************** -->
+                <!--                                               WANTED                                               -->
+                <!-- ************************************************************************************************** -->
+                <div x-show="tab === 'wanted'" class="comic__grid" id="wanted">Wanted</div>
+                
+                <!-- ************************************************************************************************** -->
+                <!--                                               SPIDER-MAN                                           -->
+                <!-- ************************************************************************************************** -->
+                <div x-show="tab === 'spidey'" class="comic__grid" id="spider-man">
+                    <div class="comic__grid__item">
+                        <img src="images/secret-wars-8.jpg" alt="comic"/>
+                        <p class="number">#8</p>
+                        <h3>Secret Wars</h3>
+                        <p>First app of black spidey</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/the-amazing-spider-man-252.jpg" alt="comic"/>
+                        <p class="number">#252</p>
+                        <h3>Amazing Spider-Man</h3>
+                        <p>First app of black spidey (contested)</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/marvel-team-up-141.jpg" alt="comic"/>
+                        <p class="number">#141</p>
+                        <h3>Marvel Team Up</h3>
+                        <p>First app of black spidey (contested)</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/what-if-4.jpg" alt="comic"/>
+                        <p class="number">#4</p>
+                        <h3>What If</h3>
+                        <p>£20</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/ultimate-fallout-4.jpg" alt="comic"/>
+                        <p class="number">#4</p>
+                        <h3>Ultimate Fallout</h3>
+                        <p>First app of Miles Morales</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/spider-man-unlimited-1-2.jpg" alt="comic"/>
+                        <p class="number">#1/2</p>
+                        <h3>Spider-Man Unlimited</h3>
+                        <p>Complete collection</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="" alt="comic"/>
+                        <p class="number"></p>
+                        <h3>Title</h3>
+                        <p>Price?</p>
+                    </div>
+                </div>
+
+
+                <!-- ************************************************************************************************** -->
+                <!--                                               COLLECTED                                            -->
+                <!-- ************************************************************************************************** -->
+                <div x-show="tab === 'collected'" class="comic__grid" id="collected">
+                    <div class="comic__grid__item">
+                        <img src="images/web-of-spider-man-1.jpg" alt="comic"/>
+                        <p class="number">#1</p>
+                        <h3>Web Of Spider-Man</h3>
+                        <p>First print</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/spawn-1.jpg" alt="comic"/>
+                        <p class="number">#1</p>
+                        <h3>Spawn</h3>
+                        <p>First spawn</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="images/deadpools-secret-wars-2-gwenpool.jpg" alt="comic"/>
+                        <p class="number">#2</p>
+                        <h3>Deadpool's Secret Wars</h3>
+                        <p>Gwenpool first appearance variant</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="/images/superior-spider-man-vol-2-1-cain.jpg" alt="comic"/>
+                        <p class="number">#1</p>
+                        <h3>Superior Spider-Man Vol. I</h3>
+                        <p>Clayton Crain variant</p>
+                    </div>
+                    <div class="comic__grid__item">
+                        <img src="" alt="comic"/>
+                        <p class="number"></p>
+                        <h3>Title</h3>
+                        <p>Price?</p>
+                    </div>
+                </div>
+                
+                <!-- ************************************************************************************************** -->
+                <!--                                               SERIES                                               -->
+                <!-- ************************************************************************************************** -->
+                <div x-show="tab === 'series'" class="comic__grid" id="series">
+                    <div class="comic__grid__list">
+                        <img src="images/immortal-hulk-1.jpg" alt="comic"/>
+                        <div class="comic__grid__list__text">
+                            <h1>Immortal Hulk</h1>
+                        </div>
+                        <template x-for="item in immortalHulk" :key="item" class="comic__grid__list__wrapper">
+                            <div x-text="item" class="comic__grid__list__item"></div>
+                        </template>
+                    </div>
+                    <div class="comic__grid__list">
+                        <img src="images/spider-man-2099-1-vol-2.jpg" alt="comic"/>
+                        <div class="comic__grid__list__text">
+                            <h1>Spiderman 2099</h1>
+                            <p class="number">Vol II</p>
+                        </div>
+                        <template x-for="item in spiderMan2099Vol2" :key="item" class="comic__grid__list__wrapper">
+                            <div x-text="item" class="comic__grid__list__item"></div>
+                        </template>
+                    </div>
+                    <div class="comic__grid__list">
+                        <img src="images/spider-man-2099-1-vol-3.jpg" alt="comic"/>
+                        <div class="comic__grid__list__text">
+                            <h1>Spiderman 2099</h1>
+                            <p class="number">Vol III</p>
+                        </div>
+                        <template x-for="item in spiderMan2099Vol3" :key="item" class="comic__grid__list__wrapper">
+                            <div x-text="item" class="comic__grid__list__item"></div>
+                        </template>
+                    </div>
+                    <div class="comic__grid__list">
+                        <img src="images/silver-sable-1.jpg" alt="comic"/>
+                        <div class="comic__grid__list__text">
+                            <h1>Silver Sable</h1>
+                        </div>
+                        <template x-for="item in silverSable" :key="item" class="comic__grid__list__wrapper">
+                            <div x-text="item" class="comic__grid__list__item"></div>
+                        </template>
+                    </div>
+                    <div class="comic__grid__list">
+                        <img src="images/spawn-1.jpg" alt="comic"/>
+                        <div class="comic__grid__list__text">
+                            <h1>Spawn</h1>
+                        </div>
+                        <template x-for="item in spawn" :key="item" class="comic__grid__list__wrapper">
+                            <div x-text="item" class="comic__grid__list__item"></div>
+                        </template>
+                    </div>
+                </div>
+                
+                <!-- EXAMPLE -->
+                <!-- <div x-show="tab === 'collected'" class="comic__grid"></div> -->
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="js/main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    </body>
+</html>
