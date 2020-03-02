@@ -1,5 +1,4 @@
-# h1 
-Collection
+# Collection
 ---
 Simple project using Alpine JS + SASS 
 
