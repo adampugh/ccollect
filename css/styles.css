@@ -28,7 +28,6 @@ body {
     cursor: pointer;
 }
 
-
 .container {
     width: 80%;
     margin: 0 auto;
@@ -68,8 +67,6 @@ body {
         margin:0.4em auto;
     }
 }
-
-
 
 .comic__grid {
     display: grid;
