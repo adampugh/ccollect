@@ -152,3 +152,8 @@ body {
     text-align: left;
     border-bottom: 1px solid lightgrey;
 }
+
+.comic__grid__list__item--black {
+    background: black;
+    color: #fff;
+}
