@@ -43,3 +43,4 @@ plus.on('click', showModal)
 // delete comic
 
 // drag order?? sortable js
+
